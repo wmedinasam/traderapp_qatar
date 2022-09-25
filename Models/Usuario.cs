@@ -20,6 +20,6 @@ namespace webapi.Models
 
         public virtual CatTipoUsuario TipoNavigation { get; set; }
         public virtual ICollection<FasegruposResultado> FasegruposResultados { get; set; }
-        public virtual Fasegrupo FaseGrupoNavigation {get; set;}
+        //public virtual Fasegrupo FaseGrupoNavigation {get; set;}
     }
 }
