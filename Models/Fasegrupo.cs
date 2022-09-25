@@ -12,6 +12,8 @@ namespace webapi.Models
         public DateTime? Fechayhora { get; set; }
         public int Estadio { get; set; }
         public int EstadoJuego { get; set; }
+        public int EquipoaGol { get; set; }
+        public int EquipobGol { get; set; }
 
         public virtual Equipo EquipoaNavigation { get; set; }
         public virtual Equipo EquipobNavigation { get; set; }

@@ -10,7 +10,6 @@ namespace webapi.Models
         public int CreatorUserid { get; set; }
         public DateTime FechaCreacion { get; set; }
         public int IdTipoLiga { get; set; }
-
         public virtual CatTipoLiga IdTipoLigaNavigation { get; set; }
     }
 }
