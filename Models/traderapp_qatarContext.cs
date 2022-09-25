@@ -145,6 +145,10 @@ namespace webapi.Models
 
                 entity.Property(e => e.EstadoJuego).HasColumnName("estado_juego");
 
+                entity.Property(e => e.EquipoaGol).HasColumnName("equipoa_gol");
+
+                entity.Property(e => e.EquipobGol).HasColumnName("equipob_gol");
+
                 entity.Property(e => e.Fechayhora)
                     .HasColumnType("datetime")
                     .HasColumnName("fechayhora");
@@ -207,7 +211,7 @@ namespace webapi.Models
                     .HasForeignKey(d => d.Userid)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_fasegrupos_resultado_usuario");
-                
+
                 entity.HasOne(d => d.FaseGrupoNavigation)
                     .WithMany()
                     .HasForeignKey(d => d.Idjuego)
