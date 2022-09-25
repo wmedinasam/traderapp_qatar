@@ -1,0 +1,21 @@
+### GET Request all items of WeatherForecast
+https://localhost:5001/WeatherForecast
+
+### POST
+POST https://localhost:5001/WeatherForecast
+Content-Type: application/json
+
+{
+    "date": "2022-09-17T21:43:20.5035378-06:00",
+    "temperatureC":0,
+    "temperatureF":0,
+    "summary":"Hot wally"
+}
+
+### DELETE
+DELETE https://localhost:5001/WeatherForecast/1
+
+### GetTestSQL
+https://localhost:5001/CatStatusJuego
+
+

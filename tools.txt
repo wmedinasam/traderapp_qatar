@@ -1,0 +1,6 @@
+--------------------- Scaffold db in vs code dotnet
+dotnet ef dbcontext scaffold "Server=.;Database={Database};User ID={User};Password={Pass};" Microsoft.EntityFrameworkCore.SqlServer -o Models
+
+
+--------------------- Scaffold controllers:
+dotnet-aspnet-codegenerator controller -name FaseGrupoResultadosController -async -api -m FasegruposResultado -dc traderapp_qatarContext -outDir Controllers
