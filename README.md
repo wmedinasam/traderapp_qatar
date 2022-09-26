@@ -9,7 +9,7 @@
 ## Technologies
 A list of technologies used within the project:
 * [.NET 6.0](https://dotnet.microsoft.com/en-us/download/dotnet/6.0):  Version 6.0
-* [Microoft SQL Server](https://www.microsoft.com/en-us/sql-server/):  SQL Server Developer 2019 15.0.4013.40
+* [Microsoft SQL Server](https://www.microsoft.com/en-us/sql-server/):  SQL Server Developer 2019 15.0.4013.40
 
 # Installation
 * First run the Script Master file in Scrpits folder.
