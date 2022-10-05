@@ -81,7 +81,7 @@ namespace webapi.Models
                     punteo = 1;
                 }
             }
-            // si no acierta
+            // si no acierta siempre devuelve 0
             return punteo;
         }
     }
