@@ -20,7 +20,6 @@ namespace webapi.Models
 
         public virtual CatTipoUsuario TipoNavigation { get; set; }
         public virtual ICollection<FasegruposResultado> FasegruposResultados { get; set; }
-        //public virtual Fasegrupo FaseGrupoNavigation {get; set;}
 
         // Devolverá el equipo ganador del partido según el resultado real ingresado, en caso de empate devuelve 0
         private int devuelveEquipoGanador(Fasegrupo partido)

@@ -284,8 +284,6 @@ namespace webapi.Models
                     .IsUnicode(false)
                     .HasColumnName("pass");
 
-                entity.Property(e => e.Puntos).HasColumnName("puntos");
-
                 entity.Property(e => e.Status).HasColumnName("status");
 
                 entity.Property(e => e.Tipo).HasColumnName("tipo");
@@ -312,6 +310,8 @@ namespace webapi.Models
                 entity.Property(e => e.MontoApuesta)
                     .HasColumnType("decimal(18, 2)")
                     .HasColumnName("monto_apuesta");
+
+                entity.Property(e => e.Punteo).HasColumnName("punteo");
 
                 entity.HasOne(d => d.IdligaNavigation)
                     .WithMany()
