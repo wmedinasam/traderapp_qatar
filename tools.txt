@@ -7,3 +7,4 @@ dotnet-aspnet-codegenerator controller -name FaseGrupoResultadosController -asyn
 
 -- Faltan cambios en el SQL Server e isntalar el SQL Server en Azure
 -- nuevos cambios
+-- otros cambios
