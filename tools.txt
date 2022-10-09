@@ -4,3 +4,5 @@ dotnet ef dbcontext scaffold "Server=.;Database={Database};User ID={User};Passwo
 
 --------------------- Scaffold controllers:
 dotnet-aspnet-codegenerator controller -name FaseGrupoResultadosController -async -api -m FasegruposResultado -dc traderapp_qatarContext -outDir Controllers
+
+-- Faltan cambios en el SQL Server e isntalar el SQL Server en Azure
