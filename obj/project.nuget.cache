@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xZrCeUptE5+0A4NFcrDVNqvWo6Ya+ggULKSevi4f0p2B8ART4K7jKRyu8xdiSo7/xCLTouKMgUICi3PGiDuUEg==",
+  "dgSpecHash": "J6luOCyxFuxMcgN3+zlobcbcwDo4iPDjMNxm9gf78gQZAoNMiNz011zulzypbd2igvkG7PtDT+EasvgsTTL7Bg==",
   "success": true,
-  "projectFilePath": "C:\\Platzi\\webapi\\webapi.csproj",
+  "projectFilePath": "c:\\Platzi\\webapi\\webapi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Xavi\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Xavi\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
