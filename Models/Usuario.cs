@@ -8,6 +8,7 @@ namespace webapi.Models
         public Usuario()
         {
             FasegruposResultados = new HashSet<FasegruposResultado>();
+            Usuarioligas = new HashSet<Usuarioliga>();
         }
 
         public int Id { get; set; }
@@ -16,10 +17,9 @@ namespace webapi.Models
         public string Email { get; set; }
         public int Status { get; set; }
         public int Tipo { get; set; }
-        public int Puntos { get; set; }
 
         public virtual CatTipoUsuario TipoNavigation { get; set; }
         public virtual ICollection<FasegruposResultado> FasegruposResultados { get; set; }
-
+        public virtual ICollection<Usuarioliga> Usuarioligas { get; set; }
     }
 }

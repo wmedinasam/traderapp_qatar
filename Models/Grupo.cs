@@ -16,6 +16,5 @@ namespace webapi.Models
 
         public virtual ICollection<Equipo> Equipos { get; set; }
         public virtual ICollection<FasegruposResultado> FasegruposResultados { get; set; }
-
     }
 }

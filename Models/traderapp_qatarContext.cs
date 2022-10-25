@@ -1,14 +1,16 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Configuration;
+﻿using System;
+using System.Collections.Generic;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata;
 
 namespace webapi.Models
 {
     public partial class traderapp_qatarContext : DbContext
     {
-         public traderapp_qatarContext(DbContextOptions<traderapp_qatarContext> options)
-        : base(options)
-    {
-    }
+        public traderapp_qatarContext(DbContextOptions<traderapp_qatarContext> options)
+            : base(options)
+        {
+        }
 
         public virtual DbSet<CatStatusJuego> CatStatusJuegos { get; set; }
         public virtual DbSet<CatTipoLiga> CatTipoLigas { get; set; }
@@ -24,6 +26,7 @@ namespace webapi.Models
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+
         }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -139,15 +142,15 @@ namespace webapi.Models
 
                 entity.Property(e => e.Equipoa).HasColumnName("equipoa");
 
+                entity.Property(e => e.EquipoaGol).HasColumnName("equipoa_gol");
+
                 entity.Property(e => e.Equipob).HasColumnName("equipob");
+
+                entity.Property(e => e.EquipobGol).HasColumnName("equipob_gol");
 
                 entity.Property(e => e.Estadio).HasColumnName("estadio");
 
                 entity.Property(e => e.EstadoJuego).HasColumnName("estado_juego");
-
-                entity.Property(e => e.EquipoaGol).HasColumnName("equipoa_gol");
-
-                entity.Property(e => e.EquipobGol).HasColumnName("equipob_gol");
 
                 entity.Property(e => e.Fechayhora)
                     .HasColumnType("datetime")
@@ -206,18 +209,17 @@ namespace webapi.Models
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_fasegrupos_resultado_grupo");
 
+                entity.HasOne(d => d.IdjuegoNavigation)
+                    .WithMany(p => p.FasegruposResultados)
+                    .HasForeignKey(d => d.Idjuego)
+                    .OnDelete(DeleteBehavior.ClientSetNull)
+                    .HasConstraintName("FK_fasegrupos_resultado_fasegrupos");
+
                 entity.HasOne(d => d.User)
                     .WithMany(p => p.FasegruposResultados)
                     .HasForeignKey(d => d.Userid)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_fasegrupos_resultado_usuario");
-
-                entity.HasOne(d => d.FaseGrupoNavigation)
-                    .WithMany()
-                    .HasForeignKey(d => d.Idjuego)
-                    .OnDelete(DeleteBehavior.ClientSetNull)
-                    .HasConstraintName("FK_fasegrupos_resultado_fasegrupos");
-
             });
 
             modelBuilder.Entity<Grupo>(entity =>
@@ -299,9 +301,7 @@ namespace webapi.Models
             {
                 entity.ToTable("usuarioliga");
 
-                entity.Property(e => e.Id)
-                    .ValueGeneratedOnAdd()
-                    .HasColumnName("id");
+                entity.Property(e => e.Id).HasColumnName("id");
 
                 entity.Property(e => e.Idliga).HasColumnName("idliga");
 
@@ -314,13 +314,13 @@ namespace webapi.Models
                 entity.Property(e => e.Punteo).HasColumnName("punteo");
 
                 entity.HasOne(d => d.IdligaNavigation)
-                    .WithMany()
+                    .WithMany(p => p.Usuarioligas)
                     .HasForeignKey(d => d.Idliga)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_usuarioliga_liga");
 
                 entity.HasOne(d => d.IdusuarioNavigation)
-                    .WithMany()
+                    .WithMany(p => p.Usuarioligas)
                     .HasForeignKey(d => d.Idusuario)
                     .OnDelete(DeleteBehavior.ClientSetNull)
                     .HasConstraintName("FK_usuarioliga_usuario");

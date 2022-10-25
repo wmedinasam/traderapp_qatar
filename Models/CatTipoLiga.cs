@@ -11,10 +11,8 @@ namespace webapi.Models
         }
 
         public int Id { get; set; }
-        public EnumTipoLiga Descripcion { get; set; }
+        public string Descripcion { get; set; }
 
         public virtual ICollection<Liga> Ligas { get; set; }
     }
-
-    public enum EnumTipoLiga{Apuesta,Diversion};
 }

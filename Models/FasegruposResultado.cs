@@ -15,7 +15,7 @@ namespace webapi.Models
         public int EquipobGol { get; set; }
 
         public virtual Grupo GrupoNavigation { get; set; }
+        public virtual Fasegrupo IdjuegoNavigation { get; set; }
         public virtual Usuario User { get; set; }
-        public virtual Fasegrupo FaseGrupoNavigation {get; set; }
     }
 }
