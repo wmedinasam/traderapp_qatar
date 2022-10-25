@@ -10,4 +10,4 @@ dotnet-aspnet-codegenerator controller -name FaseGrupoResultadosController -asyn
 -- otros cambios
 -- prueba de sonarqube y jenkins
 Sonarqube instalado localmente y se usó ngrok para conectarlo al Azure Pipelines
-prueba 2
+prueba 3
